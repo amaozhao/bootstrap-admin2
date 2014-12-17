@@ -4,9 +4,6 @@
 
 .form-row {
     overflow: hidden;
-    padding-bottom: 12px;
-    font-size: 11px;
-    border-bottom: 1px solid #eee;
 }
 
 .form-row img, .form-row input {
@@ -15,7 +12,6 @@
 
 form .form-row p {
     padding-left: 0;
-    font-size: 11px;
 }
 
 .hidden {
@@ -34,7 +30,6 @@ label {
     font-weight: normal !important;
     padding-left: 0;
     color: #666;
-    font-size: 12px;
 }
 
 .required label, label.required {
@@ -263,7 +258,6 @@ body.popup .submit-row {
     margin: 0;
     color: #666;
     padding: 3px 5px;
-    font-size: 11px;
     background: #e1e1e1 url(../img/nav-bg.gif) top left repeat-x;
     border-bottom: 1px solid #ddd;
 }
@@ -274,7 +268,6 @@ body.popup .submit-row {
 
 .inline-related h3 span.delete label {
     margin-left: 2px;
-    font-size: 11px;
 }
 
 .inline-related fieldset {
@@ -287,7 +280,6 @@ body.popup .submit-row {
 .inline-related fieldset.module h3 {
     margin: 0;
     padding: 2px 5px 3px 5px;
-    font-size: 11px;
     text-align: left;
     font-weight: bold;
     background: #bcd;
@@ -328,7 +320,6 @@ body.popup .submit-row {
     height: 1.1em;
     padding: 2px 7px;
     overflow: hidden;
-    font-size: 9px;
     font-weight: bold;
     color: #666;
     _width: 700px;
@@ -363,7 +354,6 @@ body.popup .submit-row {
 .inline-group .tabular tr.add-row td a {
     background: url(../img/icon_addlink.gif) 0 50% no-repeat;
     padding-left: 14px;
-    font-size: 11px;
     outline: 0; /* Remove dotted border around link */
 }
 
