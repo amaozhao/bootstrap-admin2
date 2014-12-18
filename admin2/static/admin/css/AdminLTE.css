@@ -582,19 +582,16 @@ body > .header .logo .icon {
   }
 }
 @media (max-width: 767px) {
-  .navbar .navbar-nav > li {
-    float: left;
-  }
+
   .navbar-nav {
     margin: 0;
-    float: left;
   }
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
   }
-  .navbar .navbar-right {
+  .navbar.navbar-static-top .navbar-right {
     float: right;
   }
 }

@@ -35,7 +35,7 @@
 
 {% block content %}
 <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
-  <div class="col-md-9">
+  <div class="col-md-12">
     <div class="box box-info">
       <div class="box-header">
         <h3 class="box-title">{{opts.verbose_name_plural|capfirst}}</h3>
@@ -85,24 +85,33 @@
     </div>
   </div>
 
-  <div class="col-md-3">
-    <div data-spy="affix" data-offset-top="80">
-      <div class="box">
-        <div class="box-body">
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-bottom">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-bottom">
+        <ul class="nav navbar-nav navbar-right">
           {% if change %}
           {% if not is_popup %}
-          <div class="btn-group btn-group-justified">
             {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
-            <a href="{% add_preserved_filters history_url %}" class="btn btn-default historylink">{% trans "History" %}</a>
-            {% if has_absolute_url %}<a href="{{ absolute_url }}" class="btn btn-default viewsitelink">{% trans "View on site" %}</a>{% endif%}
-          </div>
+              <li><a href="{% add_preserved_filters history_url %}" class="text-yellow">{% trans "History" %}</a></li>
+            {% if has_absolute_url %}
+              <li><a href="{{ absolute_url }}" class="text-muted">{% trans "View on site" %}</a></li>
+            {% endif%}
           {% endif %}
           {% endif %}
           {% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
-        </div>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 </form>
 
 {% endblock %}
